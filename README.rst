@@ -12,7 +12,7 @@ A continuación se presenta los pasos para instalar la aplicación en modo desar
     Para descargar el código fuente del proyecto contenido en su repositorio GIT realice un clon del proyecto geodjango-demo:
 
     Si da problemas con el certificado digital entonces debemos saltar su chequeo con el siguiente comando
-    
+
     $ export GIT_SSL_NO_VERIFY=True
 
     Realizar clone
@@ -43,7 +43,7 @@ A continuación se presenta los pasos para instalar la aplicación en modo desar
 
     Entrar en la carpeta raiz del proyecto:
 
-    (geodjango)$ cd sapic
+    (geodjango)$ cd geodjango-demo
     (geodjango)geodjango-demo$ 
 
     Desde ahi se deben instalar los requirimientos del proyecto con el siguiente comando:
@@ -63,7 +63,7 @@ A continuación se presenta los pasos para instalar la aplicación en modo desar
     postgres=# CREATE DATABASE geodjango OWNER=postgres ENCODING='UTF−8';
     postgres=# \q
     $ psql geodjango
-    sapic=# CREATE EXTENSION postgis;
+    geodjango=# CREATE EXTENSION postgis;
 
     Para migrar los modelos del proyecto se debe usar el siguiente comando:
 
