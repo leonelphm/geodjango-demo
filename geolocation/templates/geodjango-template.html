@@ -1,0 +1,15 @@
+{% extends "admin/base.html" %}
+{% block title %}Registrar Zipcode {% endblock title %}
+{% block extrastyle %}{{ form.media }}{% endblock extrastyle %}
+
+{% block content %}
+    <form method="post">
+    {% csrf_token %}
+        <div class="form-row">  
+            {{ form.as_p }}
+        </div>
+        <div class="submit-row">
+            <label>&nbsp;</label><input type="submit" value="Agregar ZipCode" />
+        </div>
+    </form>
+{% endblock content %}

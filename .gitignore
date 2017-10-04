@@ -1,0 +1,14 @@
+.metadata
+.buildpath
+geodjango-demo/__pycache__
+geolocation/__pycache__
+geolocation/migrations/
+*.*.backup
+*.*~
+*.swp
+*.tar.gz
+*.pyc
+*.log
+*.pydevproject
+*.project
+*.planner
