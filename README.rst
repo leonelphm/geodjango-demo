@@ -17,7 +17,7 @@ A continuación se presenta los pasos para instalar la aplicación en modo desar
 
     Realizar clone
 
-    $ git clone 
+    $ git clone https://github.com/leonelphm/geodjango-demo.git
 
 3-) Crear un Ambiente Virtual:
 
