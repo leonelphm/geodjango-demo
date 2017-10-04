@@ -50,11 +50,16 @@ class ZipcodeForms(forms.ModelForm):
         """
         super(ZipcodeForms, self).__init__(*args, **kwargs)
         self.fields['code'].widget.attrs.update({'class': 'form-control',
-                                                 'placeholder': 'Correo'})
+                                                 'placeholder': 'Zip Code'})
         self.fields['code'].label = 'Zip Code'
         self.fields['code'].required = True
 
+        # Se le agrega la ruta donde se construye el mapa con el default_zoom
         self.fields['poly'].widget = forms.OSMWidget.template_name = 'openlayers-cust.html'
+
+        # Se le agrega al campo los atributos que por defecto tiene la ubicacion (lat lon) de Venezuela
+        # Con un zoom por defecto de 5.2 y
+        # Un alto y ancho de 600X400
         self.fields['poly'].widget = forms.OSMWidget(attrs={
                                     'default_zoom': 5.2, 'map_width': 600,
                                     'map_height': 400, 'default_lat': 8,
