@@ -12,9 +12,11 @@ A continuación se presenta los pasos para instalar la aplicación en modo desar
     Para descargar el código fuente del proyecto contenido en su repositorio GIT realice un clon del proyecto geodjango-demo:
 
     Si da problemas con el certificado digital entonces debemos saltar su chequeo con el siguiente comando
+    
     $ export GIT_SSL_NO_VERIFY=True
 
-    Realizar clone 
+    Realizar clone
+
     $ git clone 
 
 3-) Crear un Ambiente Virtual:
