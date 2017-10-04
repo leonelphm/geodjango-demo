@@ -61,8 +61,11 @@ A continuación se presenta los pasos para instalar la aplicación en modo desar
 
 
     postgres=# CREATE DATABASE geodjango OWNER=postgres ENCODING='UTF−8';
+
     postgres=# \q
+
     $ psql geodjango
+
     geodjango=# CREATE EXTENSION postgis;
 
     Para migrar los modelos del proyecto se debe usar el siguiente comando:
@@ -83,5 +86,7 @@ A continuación se presenta los pasos para instalar la aplicación en modo desar
 
 
 Contacto:
+
 leonelphm@gmail.com
+
 lhernandez@cenditel.go.ve
