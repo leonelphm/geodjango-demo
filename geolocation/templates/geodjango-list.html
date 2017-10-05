@@ -1,0 +1,59 @@
+{% extends "admin/base.html" %}
+{% block title %}Listar Zipcode {% endblock title %}
+{% block branding %}
+    <h1 id="site-name"><a href="{% url 'admin:index' %}">Demo-GeoDjango</a></h1>
+{% endblock %}
+{% block breadcrumbs %}
+    <div class="breadcrumbs">
+    <a href="{% url 'geolocation:register_poly' %}">Registrar ZipCode</a>/
+    <a href="{% url 'geolocation:list_zipcode' %}">Listar ZipCode</a>
+    {% if title %} &rsaquo; {{ title }}{% endif %}
+    </div>
+{% endblock breadcrumbs%}
+{% block content %}
+    <h1>Zip Codes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    ZipCodes
+                </th>
+                <th>
+                    Coordenadas
+                </th>
+                <th>
+                    Acciones
+                </th>
+            </tr>
+        </thead>
+    {% for zips in object_list %}
+        <tbody>
+            <tr>
+                <td>{{ zips.code }}</td>
+                 <td>{{ zips.poly }}</td>
+                 <td><a title="Editar" class="changelink" href="{% url 'geolocation:update_zipcode' zips.pk %}"></a>
+                 <a title="Eliminar" class="deletelink" href="{% url 'geolocation:delete_zipcode' zips.pk %}"></a></td>
+            </tr> 
+        </tbody>
+    {% empty %}
+        <tbody>
+            <tr><td>No hay zipcode.</td></tr>
+        </tbody>
+    {% endfor %}
+    </table>
+    {% if is_paginated %}
+        <div class="pagination">
+            <span class="page-links">
+                {% if page_obj.has_previous %}
+                    <a href="/geolocation/list-zipcode/?page={{ page_obj.previous_page_number }}">Anterior</a>
+                {% endif %}
+                <span class="page-current">
+                    Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+                </span>
+                {% if page_obj.has_next %}
+                    <a href="/geolocation/list-zipcode/?page={{ page_obj.next_page_number }}">Siguiente</a>
+                {% endif %}
+            </span>
+        </div>
+    {% endif %}
+{% endblock content %}
