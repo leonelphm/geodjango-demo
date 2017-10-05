@@ -20,4 +20,13 @@ urlpatterns = [
                 url(r'^register-poly/',
                     RegisterPolyView.as_view(),
                     name="register_poly"),
+                url(r'^list-zipcode/',
+                    ListZipcodeView.as_view(),
+                    name="list_zipcode"),
+                url(r'^delete-zipcode/(?P<pk>\d+)/',
+                    ZipcodeDeleteView.as_view(),
+                    name="delete_zipcode"),
+                url(r'update-zipcode/(?P<pk>\d+)/$',
+                    ZipCodeUpdate.as_view(),
+                    name='update_zipcode')
               ]

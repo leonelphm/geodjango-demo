@@ -1,7 +1,16 @@
 {% extends "admin/base.html" %}
 {% block title %}Registrar Zipcode {% endblock title %}
 {% block extrastyle %}{{ form.media }}{% endblock extrastyle %}
-
+{% block branding %}
+    <h1 id="site-name"><a href="{% url 'admin:index' %}">Demo-GeoDjango</a></h1>
+{% endblock branding %}
+{% block breadcrumbs %}
+    <div class="breadcrumbs">
+    <a href="{% url 'geolocation:register_poly' %}">Registrar ZipCode</a>/
+    <a href="{% url 'geolocation:list_zipcode' %}">Listar ZipCode</a>
+    {% if title %} &rsaquo; {{ title }}{% endif %}
+    </div>
+{% endblock breadcrumbs%}
 {% block content %}
     <form method="post">
     {% csrf_token %}
