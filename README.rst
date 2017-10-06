@@ -5,6 +5,7 @@ A continuación se presenta los pasos para instalar la aplicación en modo desar
 1-) Instalar el controlador de versiones git:
     
     $ su
+    
     # aptitude install git
 
 2-) Descargar el codigo fuente de geodjango-demo:
@@ -70,7 +71,7 @@ A continuación se presenta los pasos para instalar la aplicación en modo desar
     $ psql 
 
     Ejecutar la siguiente sentencia estando en la consola de postgres:
-    
+
     postgres=# CREATE DATABASE geodjango OWNER=postgres ENCODING='UTF−8';
 
     postgres=#  \q
@@ -82,6 +83,8 @@ A continuación se presenta los pasos para instalar la aplicación en modo desar
     Para migrar los modelos del proyecto se debe usar el siguiente comando:
 
     (geodjango)$ python manage.py makemigrations
+
+    (geodjango)$ python manage.py makemigrations geolocation
 
     (geodjango)$ python manage.py migrate
 
