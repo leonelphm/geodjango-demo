@@ -5,7 +5,7 @@ A continuación se presenta los pasos para instalar la aplicación en modo desar
 1-) Instalar el controlador de versiones git:
     
     $ su
-    
+
     # aptitude install git
 
 2-) Descargar el codigo fuente de geodjango-demo:
@@ -104,4 +104,6 @@ Contacto:
 
 leonelphm@gmail.com
 
-lhernandez@cenditel.go.ve
+leonelphm@hotmail.com
+
+lhernandez@cenditel.gob.ve
