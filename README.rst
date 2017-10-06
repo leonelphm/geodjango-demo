@@ -39,11 +39,15 @@ A continuación se presenta los pasos para instalar la aplicación en modo desar
     Para activar el ambiente virtual geodjango ejecute el siguiente comando:
 
     $ workon geodjango
+
+    Quedando activado el entorno virtual de esta manera.
+
     (geodjango)$
 
     Entrar en la carpeta raiz del proyecto:
 
     (geodjango)$ cd geodjango-demo
+
     (geodjango)geodjango-demo$ 
 
     Desde ahi se deben instalar los requirimientos del proyecto con el siguiente comando:
@@ -61,10 +65,15 @@ A continuación se presenta los pasos para instalar la aplicación en modo desar
 
     # aptitude install postgresql-x.x-postgis-x.x
 
+    Ingresar a la consola de postgres con la siguiente orden:
 
+    $ psql 
+
+    Ejecutar la siguiente sentencia estando en la consola de postgres:
+    
     postgres=# CREATE DATABASE geodjango OWNER=postgres ENCODING='UTF−8';
 
-    postgres=# \q
+    postgres=#  \q
 
     $ psql geodjango
 
